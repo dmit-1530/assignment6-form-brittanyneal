@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* make sure that there isn't too much stuff here IF things start messing up.... */
 }
 
 /* typography */
@@ -23,6 +22,7 @@ h2 {
     border-left: 5px solid #CB4E0B;
     margin-bottom: 1.5rem;
     padding-left: .25rem;
+    display: inline-block;
 }
 
 p {
@@ -38,15 +38,13 @@ legend {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 1.5rem */
 }
 
 section {
-    margin: 3rem 0;
+    padding: 3rem 0;
 }
 
 form {
-/* THIS IS THE BACKGROUND WHITE PART OF THE ENTIRE FORM+PADDING AROUND THE FORM CONTENT/BOXES */
     background-color: white;
     padding: 2rem 1rem;
     min-width: 15rem;
@@ -59,7 +57,6 @@ form fieldset {
 }
 
 form label:not(input[type="radio"] + label, input[type="checkbox"] + label) {
-    /* THIS STYLES THE RADIO BUTTONS FOR AREA OF INTEREST */
     display: block;
     width: 100%;
     margin-bottom: .5rem;
@@ -89,7 +86,6 @@ form fieldset div {
 }
 
 form fieldset label {
-    /* had to remove the nth of type as there's only one fieldset! silly brittany */
     padding: 1rem;
     border-radius: .5rem;
     border: 1px solid #C1C4C8;
@@ -114,10 +110,7 @@ form textarea {
 
 fieldset>div {
     margin-bottom: 1.125rem;
-    /* CHANGE THIS??? */
 }
-
-/* figure out how to get "select area of interest" back to the left */
 
 fieldset label:has(input[type="radio"]:checked) {
     background-color: #CB4E0B;
@@ -128,7 +121,6 @@ fieldset {
     border: none;
     padding: 0;
     margin-bottom: 2rem;
-    /* Larisa had colour in the demo - do i need that? dbl check */
 }
 
 input[type="submit"] {
@@ -142,9 +134,6 @@ input[type="submit"] {
     box-shadow: 0px 2px 2px rgba(60, 64, 67, .3);
     width: 80%;
     transition: all 0.3s ease;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 100%;
 }
 
@@ -168,9 +157,64 @@ input[type="submit"]:hover {
         gap: 1rem;
         display: flex;
     }
-    
-    
+
+    img {
+        width: 21.625rem;
+    }
+
+    textarea {
+        height: 12.5rem;
+    }
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 100vh;
+    }
+
+    header {
+        padding-right: 2.5rem;
+        flex: 1;
+    }
+
+    .inner-header-container {
+        flex-direction: column;
+        width: 31.25rem;
+    }
+
+    img {
+        width: 31.25rem;
+    }
+
+    form fieldset label {
+        flex-basis: calc(50% - 1rem);
+        margin-top: .5rem;
+        padding: 1.0625rem 2.5rem;
+
+    }
+}
+
+@media (min-width: 1700px) {
+    .container {
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 3rem 11.5rem 3rem 4.38rem;
+
+    }
+
+    form fieldset label {
+        flex-basis: calc(25% - 1rem);
+        flex-grow: 1;
+        flex-shrink: 1;
+        white-space: nowrap;
+        padding: 1.0625rem 1rem;
+    }
+}
 
 
