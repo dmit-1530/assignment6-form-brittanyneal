@@ -200,9 +200,9 @@ input[type="submit"]:hover {
     }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1660px) {
     .container {
-        max-width: 1700px;
+        max-width: 1660px;
         margin: 0 auto;
         padding: 3rem 11.5rem 3rem 4.38rem;
 
@@ -215,6 +215,7 @@ input[type="submit"]:hover {
         white-space: nowrap;
         padding: 1.0625rem 1rem;
     }
+    
 }
 
 
